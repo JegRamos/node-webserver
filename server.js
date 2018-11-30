@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 let app = express();
 
 //? Handlebars set-up
@@ -48,6 +49,6 @@ app.get('/bad', (request, respond) => {
     });
 });
 
-app.listen(8000, () => {
-    console.log('Server is up on port 8000');
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });
